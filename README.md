@@ -1,4 +1,9 @@
 [![PythonVersion](https://img.shields.io/pypi/pyversions/py?style=plastic)](https://img.shields.io/pypi/pyversions/py?style=plastic)
+[![License](https://img.shields.io/github/license/kolahimself/real-estate-valuation?style=plastic))](https://opensource.org/licenses/MIT)
+[![Open All Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RP79ciXT9nw-sQZoyNObr9pNSP9fP9cE?usp=sharing)
+[![GitHub commit](https://img.shields.io/github/last-commit/kolahimself/real-estate-valuation?style=plastic)](https://github.com/kolahimself/real-estate-valuation/commits/main)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](http://makeapullrequest.com)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 # `Real Estate Valuation`
 
@@ -70,7 +75,7 @@ Boxplots indicating categorical correlations are shown [in this folder](https://
 > **transaction_date** doesn't seem to be very predictive, so it is ommitted before preprocessing and training.
 
 ## Running the Project
-Preferably, you can run python scripts directly from `scripts`. Similar prototypes and explorations in form of notebooks for automation can be viewed here in `notebooks`
+Preferably, you can run python scripts directly from `src`. Similar prototypes and explorations in form of notebooks for automation can be viewed here in `notebooks`
 
 ## Project Structure Overview
 The project structure tree is shown below. This structure is designed in a way to easily develop ML projects. Feedback / PRs are always welcome about the structure.
