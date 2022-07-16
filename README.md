@@ -88,25 +88,24 @@ The project structure tree is shown below. This structure is designed in a way t
 |   |── label-distributions           # .png image plots portraying label distribution with and without outliers
 |   |── numeric-correlations          # .png image plots showing numeric correlations and observations
 |   |── categorical-correlations      # .png image plots showing categorical features and their correlations
+|
 ├── data                
-│   ├── predictions     # predictions data, calculated using the model
-│   ├── raw             # immutable original data
-│   ├── staging         # data obtained after preprocessing, i.e. cleaning, merging, filtering etc.
-│   └── transformed     # data ready for modeling (dataset containing features and label)
+│   ├── external                      # third party data
+│   |── interim                       # transformed intermediate data, not ready for modelling
+│   ├── processed                     # processed data, ready for modelling
+│   ├── raw                           # immutable original data
+│   ├── predictions                   # predictions data, calculated using the model
 |
-├── docker              # Store all dockerfiles
+├── models              
+|   ├── GradientBoostingRegressor     # store a serialized and well fitted GradientBoostingRegressor model
+|   ├── RandomForestRegressor         # store a serialized and well fitted RandomForestRegressor model
+|   ├── linear-regression             # RMSE > 7, model cannot be used❌
 |
-├── ml_skeleton_py      # Logic of the model
-│   ├── etl             # Logic for cleaning the data and preparing train / test set 
-│   └── model           # Logic for ML model including CV, parameter tuning, model evaluation
+├── notebooks                         # Store prototype or exploration related .ipynb notebooks
 |
-├── models              # Store serialized fitted models
+├── reports                           # Store textual or visualisation content, i.e. pdf, latex, .doc, .txt 
 |
-├── notebooks           # Store prototype or exploration related .ipynb notebooks
+├── src                               # folder containing project source code
 |
-├── reports             # Store textual or visualisation content, i.e. pdf, latex, .doc, .txt 
-|
-├── scripts             # Call ml_skeleton_py module from here e.g. cli for training
-|
-└── tests               # Unit tests
+└── tests                             # Unit tests
 ```
