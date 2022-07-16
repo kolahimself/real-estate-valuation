@@ -53,3 +53,55 @@ An extract from the dataset:
   - **Y** = house price of unit area ( $10000 (New Taiwan Dollar)/Ping, where Ping is a local unit, 1 Ping = 3.3 meter squared)
 
 ## Exploration
+
+![plot](https://github.com/kolahimself/real-estate-valuation/blob/main/images/label-distribution/label-distribution.png)
+
+The plots above show that the house price per 3.3 metre-square unit ranges from 0 to 118. However, the mean (and median) number of daily rentals is closer to the low end of that range, with most of the data between 0 and around 80 units. The few values above this are shown in the box plot as small circles, indicating that they are *outliers* - in other words, unusually high or low values beyond the typical range of most of the data.
+
+The histogram & boxplot plots below show distribution for modified data, the outliers have been removed
+
+![plot](https://github.com/kolahimself/real-estate-valuation/blob/main/images/label-distribution/label-distribution-without-outliers.png)
+
+### Feature Correlations
+Scatter plots indicating numeric correlations between house prices and numerical features are shown [in this folder](https://github.com/kolahimself/real-estate-valuation/tree/main/images/numerical-correlations),
+
+Boxplots indicating categorical correlations are shown [in this folder](https://github.com/kolahimself/real-estate-valuation/tree/main/images/categorical-correlations),
+
+> **transaction_date** doesn't seem to be very predictive, so it is ommitted before preprocessing and training.
+
+## Running the Project
+Preferably, you can run python scripts directly from `scripts`. Similar prototypes and explorations in form of notebooks for automation can be viewed here in `notebooks`
+
+## Project Structure Overview
+The project structure tree is shown below. This structure is designed in a way to easily develop ML projects. Feedback / PRs are always welcome about the structure.
+
+```
+.
+├── .github                           # Github actions CI pipeline
+|
+|── images
+|   |── label-distributions           # .png image plots portraying label distribution with and without outliers
+|   |── numeric-correlations          # .png image plots showing numeric correlations and observations
+|   |── categorical-correlations      # .png image plots showing categorical features and their correlations
+├── data                
+│   ├── predictions     # predictions data, calculated using the model
+│   ├── raw             # immutable original data
+│   ├── staging         # data obtained after preprocessing, i.e. cleaning, merging, filtering etc.
+│   └── transformed     # data ready for modeling (dataset containing features and label)
+|
+├── docker              # Store all dockerfiles
+|
+├── ml_skeleton_py      # Logic of the model
+│   ├── etl             # Logic for cleaning the data and preparing train / test set 
+│   └── model           # Logic for ML model including CV, parameter tuning, model evaluation
+|
+├── models              # Store serialized fitted models
+|
+├── notebooks           # Store prototype or exploration related .ipynb notebooks
+|
+├── reports             # Store textual or visualisation content, i.e. pdf, latex, .doc, .txt 
+|
+├── scripts             # Call ml_skeleton_py module from here e.g. cli for training
+|
+└── tests               # Unit tests
+```
