@@ -12,7 +12,7 @@
 ## Description
 Predicting the selling price of a residential property depends on a number of factors, including the property age, availability of local amenities, and location.
 
-The contents of this repository and project as a whole are aimed at predicting the price-per-unit of a property on its features using a dataset of real estate transactions. The price-per-unit in this data is based on a unit measurement of 3.3 square meters. Python language is used throughout.
+The contents of this repository and project as a whole are aimed at predicting the price-per-unit of a property on its features using a dataset of real estate transactions. The price-per-unit in this data is based on a unit measurement of 3.3 square meters. The repository contains python scripts, notebooks and excel files.
 
 > **Citation**: The data used in this exercise originates from the following study:
 >
