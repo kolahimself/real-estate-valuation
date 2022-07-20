@@ -1,4 +1,3 @@
-[![PythonVersion](https://img.shields.io/pypi/pyversions/py?style=plastic)](https://img.shields.io/pypi/pyversions/py?style=plastic)
 [![License](https://img.shields.io/github/license/kolahimself/real-estate-valuation?style=plastic))](https://opensource.org/licenses/MIT)
 [![Open All Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RP79ciXT9nw-sQZoyNObr9pNSP9fP9cE?usp=sharing)
 [![GitHub commit](https://img.shields.io/github/last-commit/kolahimself/real-estate-valuation?style=plastic)](https://github.com/kolahimself/real-estate-valuation/commits/main)
