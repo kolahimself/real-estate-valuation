@@ -2,7 +2,6 @@
 [![Open All Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RP79ciXT9nw-sQZoyNObr9pNSP9fP9cE?usp=sharing)
 [![GitHub commit](https://img.shields.io/github/last-commit/kolahimself/real-estate-valuation?style=plastic)](https://github.com/kolahimself/real-estate-valuation/commits/main)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=plastic)](http://makeapullrequest.com)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 # `Real Estate Valuation`
 
@@ -11,7 +10,8 @@
 ## Description
 Predicting the selling price of a residential property depends on a number of factors, including the property age, availability of local amenities, and location.
 
-The contents of this repository and project as a whole are aimed at predicting the price-per-unit of a property on its features using a dataset of real estate transactions. The price-per-unit in this data is based on a unit measurement of 3.3 square meters. The repository contains python scripts, notebooks and excel files.
+The contents of this repository and project as a whole are aimed at predicting the price-per-unit of a property on its features using a dataset of real estate transactions. The price-per-unit in this data is based on a unit measurement of 3.3 square meters. The repository contains necessary python scripts, notebooks and excel files required for an efficient workflow.
+
 
 > **Citation**: The data used in this exercise originates from the following study:
 >
@@ -35,6 +35,7 @@ Main language used is python, as well as jupyter notebooks. Other python package
 - Numpy: [Comprehensive mathematical functions, random number generators, linear algebra routines, Fourier transforms, and more.](https://numpy.org/)
 - Matplotlib: [A comprehensive library for creating static, animated, and interactive visualizations](https://matplotlib.org/)
 - Joblib: [Running Python functions as pipelines](https://joblib.readthedocs.io/)
+- openpyxl: [ a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files](https://pypi.org/project/openpyxl/)
 
 ## Data Review
 An extract from the dataset:
@@ -67,14 +68,16 @@ The histogram & boxplot plots below show distribution for modified data, the out
 ![plot](https://github.com/kolahimself/real-estate-valuation/blob/main/images/label-distribution/label-distribution-without-outliers.png)
 
 ### Feature Correlations
-Scatter plots indicating numeric correlations between house prices and numerical features are shown [in this folder](https://github.com/kolahimself/real-estate-valuation/tree/main/images/numerical-correlations),
+Scatter plots indicating numeric correlations between house prices and numerical features are shown [in this folder](https://github.com/kolahimself/real-estate-valuation/tree/main/images/numerical-correlations), 
 
 Boxplots indicating categorical correlations are shown [in this folder](https://github.com/kolahimself/real-estate-valuation/tree/main/images/categorical-correlations),
 
 > **transaction_date** doesn't seem to be very predictive, so it is ommitted before preprocessing and training.
 
+Scripts used for the generation of these plots can be found in the src/data directory.
+
 ## Running the Project
-Preferably, you can run python scripts directly from `src`. Similar prototypes and explorations in form of notebooks for automation can be viewed here in `notebooks`
+Preferably, you can run python scripts directly from `src`. Similar prototypes and explorations in form of notebooks demonstrating an easier workflow can be viewed here in `notebooks`
 
 ## Project Structure Overview
 The project structure tree is shown below. This structure is designed in a way to easily develop ML projects. Feedback / PRs are always welcome about the structure.
@@ -87,6 +90,7 @@ The project structure tree is shown below. This structure is designed in a way t
 |   |── label-distributions           # .png image plots portraying label distribution with and without outliers
 |   |── numeric-correlations          # .png image plots showing numeric correlations and observations
 |   |── categorical-correlations      # .png image plots showing categorical features and their correlations
+|   |── predictions                   # .png image plots showing predicted data vs actual labels
 |
 ├── data                
 │   ├── external                      # third party data
@@ -102,9 +106,12 @@ The project structure tree is shown below. This structure is designed in a way t
 |
 ├── notebooks                         # Store prototype or exploration related .ipynb notebooks
 |
-├── reports                           # Store textual or visualisation content, i.e. pdf, latex, .doc, .txt 
-|
 ├── src                               # folder containing project source code
+|   |── data                          # folder containing scripts to generate data
+|   |── features                      # folder containing scripts to transform data for modelling.
+|   |── model                         # folder containing scripts to train and predict machine learning models as well as saving them.
+|
+|── utilities                         # folder containing a settings.py file for directory configurations.
 |
 └── tests                             # Unit tests
 ```
